@@ -8,12 +8,15 @@ extends CharacterBody2D
 @onready var sprite_2d = $AnimatedSprite2D
 
 
-
-const GRAVITY : float = 1000.0
-const JUMP_VELOCITY : float = -400.0
+const JUMP_COUNT_MAX = 2
+const GRAVITY : float = 700.0
+const JUMP_VELOCITY : float = -500.0
 const RUN_VELOCITY : float = 150.0
 const MAX_FALL : float = 400.0
 const HURT_TIMMER : float = 0.3
+
+
+var jump_count = 0
 
 
 enum PLAYER_STATE{IDLE, RUN, JUMP, FALL, HURT}  #for different actions and easy use of each state
@@ -60,8 +63,15 @@ func get_input() -> void:
 		velocity.x = RUN_VELOCITY
 		sprite_2d.flip_h = false
 	
-	if Input.is_action_pressed("jump") and is_on_floor() == true:
-		velocity.y = JUMP_VELOCITY
+	if is_on_floor() and jump_count!= 0:
+		jump_count = 0
+		
+	if jump_count < 2:
+		if Input.is_action_just_pressed("jump"):
+				velocity.y = JUMP_VELOCITY
+				jump_count += 1
+				
+		
 		
 	velocity.y = clampf(velocity.y,JUMP_VELOCITY,MAX_FALL)
 	

@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://cte2e85gjl3yw"]
+[gd_scene load_steps=11 format=3 uid="uid://cte2e85gjl3yw"]
 
 [ext_resource type="PackedScene" uid="uid://7wnccn3ycuva" path="res://Player/player.tscn" id="1_kcw2b"]
 [ext_resource type="Script" path="res://Levelscene/levelscene.gd" id="1_mmi2o"]
 [ext_resource type="Texture2D" uid="uid://cja35ary3j17u" path="res://Assets/platmormer-Sheet.png" id="3_1ehmq"]
 [ext_resource type="PackedScene" uid="uid://c27tjomhg7ymi" path="res://BG/parallax_background.tscn" id="3_o6mop"]
-[ext_resource type="PackedScene" uid="uid://dll3kgih6h03n" path="res://player_cam/camera_2d.tscn" id="5_kldyq"]
+[ext_resource type="PackedScene" uid="uid://djsgtbsd70o3s" path="res://camera/camera_2d.tscn" id="6_2ye1d"]
 [ext_resource type="PackedScene" uid="uid://2lp4xx27xgtu" path="res://platform/platform1.tscn" id="6_n45a6"]
+[ext_resource type="PackedScene" uid="uid://cgbnwx1gqy4di" path="res://platform/wall.tscn" id="7_53fql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pykrq"]
-size = Vector2(6027.06, 287.634)
+size = Vector2(6113.18, 287.634)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkuv5"]
 texture = ExtResource("3_1ehmq")
@@ -183,14 +184,15 @@ sources/0 = SubResource("TileSetAtlasSource_gkuv5")
 script = ExtResource("1_mmi2o")
 
 [node name="Player" parent="." instance=ExtResource("1_kcw2b")]
-position = Vector2(347, 368)
-scale = Vector2(1.5, 1.5)
+z_index = 5
+position = Vector2(638, 351)
+scale = Vector2(2.485, 2.485)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-372, -204)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2891.5, 915.218)
+position = Vector2(2855.5, 915.218)
 scale = Vector2(0.836063, 0.62731)
 shape = SubResource("RectangleShape2D_pykrq")
 
@@ -201,8 +203,21 @@ scale = Vector2(1.355, 1.355)
 tile_set = SubResource("TileSet_atdd0")
 format = 2
 
-[node name="Camera2D" parent="." instance=ExtResource("5_kldyq")]
-position = Vector2(345, 371)
-
 [node name="Platform1" parent="." instance=ExtResource("6_n45a6")]
 position = Vector2(911, 558)
+
+[node name="Camera2D" parent="." instance=ExtResource("6_2ye1d")]
+position = Vector2(638, 343)
+zoom = Vector2(1, 1)
+limit_left = -50
+limit_top = 0
+limit_right = 2600
+limit_bottom = 680
+
+[node name="wall" parent="." instance=ExtResource("7_53fql")]
+position = Vector2(-34, 310)
+scale = Vector2(4.2, 4.2)
+
+[node name="wall2" parent="." instance=ExtResource("7_53fql")]
+position = Vector2(2573, 305)
+scale = Vector2(4.2, 4.2)
