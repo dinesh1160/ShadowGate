@@ -1,6 +1,6 @@
-
-
 extends CharacterBody2D
+
+class_name Player
 
 @onready var animation_player = $AnimationPlayer
 #@onready var debug_label = $DebugLabel
@@ -19,7 +19,7 @@ const HURT_TIMMER : float = 0.3
 var jump_count = 0
 
 
-enum PLAYER_STATE{IDLE, RUN, JUMP, FALL, HURT}  #for different actions and easy use of each state
+enum PLAYER_STATE{IDLE, RUN, JUMP, FALL, HURT, ATTACK}  #for different actions and easy use of each state
 
 var _state : PLAYER_STATE = PLAYER_STATE.IDLE  
 
@@ -39,9 +39,8 @@ func _physics_process(delta):
 	get_input() #getting input and deciding velocity
 	move_and_slide() #after velocity
 	calculate_state() #animation
-	#display_debuglabel()
-	
 
+#display_debuglabel()
 #func display_debuglabel() -> void:
 	#debug_label.text = "Floor: %s\n %s\n, %.1f, %.1f\n " % [
 		#is_on_floor(),
@@ -62,17 +61,16 @@ func get_input() -> void:
 	elif Input.is_action_pressed("right"):
 		velocity.x = RUN_VELOCITY
 		sprite_2d.flip_h = false
-	
+		
 	if is_on_floor() and jump_count!= 0:
 		jump_count = 0
-		
+			
 	if jump_count < 2:
 		if Input.is_action_just_pressed("jump"):
 				velocity.y = JUMP_VELOCITY
 				jump_count += 1
-				
 		
-		
+	
 	velocity.y = clampf(velocity.y,JUMP_VELOCITY,MAX_FALL)
 	
 		
@@ -80,7 +78,6 @@ func calculate_state() -> void:
 	
 	if _state == PLAYER_STATE.HURT:  #invincible for some time and the animation plays
 		return
-	
 	if is_on_floor() == true:
 		if velocity.x == 0:
 			set_state(PLAYER_STATE.IDLE)
@@ -111,5 +108,7 @@ func set_state(new_state: PLAYER_STATE) -> void:
 			animation_player.play("jump")
 		PLAYER_STATE.RUN:
 			animation_player.play("run")
+		PLAYER_STATE.ATTACK:
+			animation_player.play("attack")
 		PLAYER_STATE.FALL:
 			animation_player.play("fall")

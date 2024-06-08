@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cte2e85gjl3yw"]
+[gd_scene load_steps=13 format=3 uid="uid://cte2e85gjl3yw"]
 
 [ext_resource type="PackedScene" uid="uid://7wnccn3ycuva" path="res://Player/player.tscn" id="1_kcw2b"]
 [ext_resource type="Script" path="res://Levelscene/levelscene.gd" id="1_mmi2o"]
@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://djsgtbsd70o3s" path="res://camera/camera_2d.tscn" id="6_2ye1d"]
 [ext_resource type="PackedScene" uid="uid://2lp4xx27xgtu" path="res://platform/platform1.tscn" id="6_n45a6"]
 [ext_resource type="PackedScene" uid="uid://cgbnwx1gqy4di" path="res://platform/wall.tscn" id="7_53fql"]
+[ext_resource type="PackedScene" uid="uid://bwnjokp5e1xud" path="res://Enemies/Jumper/jumper.tscn" id="8_q156x"]
+[ext_resource type="PackedScene" uid="uid://533q5wo4w4n7" path="res://Enemies/FlyG/fly_g.tscn" id="9_nxitu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pykrq"]
-size = Vector2(6113.18, 287.634)
+size = Vector2(3322.72, 287.634)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkuv5"]
 texture = ExtResource("3_1ehmq")
@@ -185,14 +187,15 @@ script = ExtResource("1_mmi2o")
 
 [node name="Player" parent="." instance=ExtResource("1_kcw2b")]
 z_index = 5
-position = Vector2(638, 351)
+position = Vector2(728, 349)
 scale = Vector2(2.485, 2.485)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-372, -204)
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2855.5, 915.218)
+position = Vector2(1646, 915.218)
 scale = Vector2(0.836063, 0.62731)
 shape = SubResource("RectangleShape2D_pykrq")
 
@@ -207,7 +210,7 @@ format = 2
 position = Vector2(911, 558)
 
 [node name="Camera2D" parent="." instance=ExtResource("6_2ye1d")]
-position = Vector2(638, 343)
+position = Vector2(634, 354)
 zoom = Vector2(1, 1)
 limit_left = -50
 limit_top = 0
@@ -215,9 +218,15 @@ limit_right = 2600
 limit_bottom = 680
 
 [node name="wall" parent="." instance=ExtResource("7_53fql")]
-position = Vector2(-34, 310)
+position = Vector2(-38, 312)
 scale = Vector2(4.2, 4.2)
 
 [node name="wall2" parent="." instance=ExtResource("7_53fql")]
 position = Vector2(2573, 305)
 scale = Vector2(4.2, 4.2)
+
+[node name="Jumper" parent="." instance=ExtResource("8_q156x")]
+position = Vector2(381, 301)
+
+[node name="FlyG" parent="." instance=ExtResource("9_nxitu")]
+position = Vector2(1202, 159)
