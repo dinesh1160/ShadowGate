@@ -187,8 +187,8 @@ script = ExtResource("1_mmi2o")
 
 [node name="Player" parent="." instance=ExtResource("1_kcw2b")]
 z_index = 5
-position = Vector2(728, 349)
-scale = Vector2(2.485, 2.485)
+position = Vector2(1203, 353)
+scale = Vector2(2.485, 2.46417)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-372, -204)
@@ -229,4 +229,7 @@ scale = Vector2(4.2, 4.2)
 position = Vector2(381, 301)
 
 [node name="FlyG" parent="." instance=ExtResource("9_nxitu")]
-position = Vector2(1202, 159)
+position = Vector2(1922, 343)
+
+[node name="FlyG2" parent="." instance=ExtResource("9_nxitu")]
+position = Vector2(2358, 135)

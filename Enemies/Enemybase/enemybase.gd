@@ -11,7 +11,7 @@ const OFF_SCREEN_KILL_LIMIT: float = 1000.00
 var _speed: float = 100.00
 var _gravity: float = 800.00
 var _player_ref: Player
-var _dying: bool  = false
+var _dead: bool  = false
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,10 +28,10 @@ func offscreen_kill():
 		queue_free() 
 		
 func die():
-	if _dying == true:
+	if _dead == true:
 		return
 	else:
-		_dying = true
+		_dead = true
 		Signalmanager.on_enemy_hit.emit(points,global_position)
 		set_physics_process(false)
 		hide()

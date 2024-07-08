@@ -1,8 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://533q5wo4w4n7"]
+[gd_scene load_steps=15 format=3 uid="uid://533q5wo4w4n7"]
 
 [ext_resource type="PackedScene" uid="uid://cfn0pn5j0qjmc" path="res://Enemies/Enemybase/enemybase.tscn" id="1_ugneo"]
 [ext_resource type="Script" path="res://Enemies/FlyG/fly_g.gd" id="2_ux0fc"]
 [ext_resource type="Texture2D" uid="uid://cc2ogpdv4t2sh" path="res://Assets/FoxyAntics/assets/enemies/eagle/eagle-attack.png" id="3_e8whm"]
+[ext_resource type="Texture2D" uid="uid://nncfyprruncx" path="res://Assets/eagle-attackhhurt.png" id="3_yh0nd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_excou"]
+atlas = ExtResource("3_yh0nd")
+region = Rect2(0, 0, 40, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvk2i"]
+atlas = ExtResource("3_yh0nd")
+region = Rect2(0, 0, 40, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0g2lr"]
 atlas = ExtResource("3_e8whm")
@@ -23,6 +32,22 @@ region = Rect2(120, 0, 40, 41)
 [sub_resource type="SpriteFrames" id="SpriteFrames_7adw6"]
 animations = [{
 "frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_excou")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvk2i")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0g2lr")
 }, {
@@ -41,7 +66,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7tut3"]
-radius = 15.0
+radius = 28.2843
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kjoej"]
+radius = 32.0624
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ckyoi"]
+radius = 36.4966
 
 [node name="FlyG" instance=ExtResource("1_ugneo")]
 collision_layer = 2
@@ -51,7 +82,7 @@ script = ExtResource("2_ux0fc")
 [node name="AnimatedSprite2D" parent="." index="1"]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_7adw6")
-animation = &"idle"
+animation = &"dead"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
@@ -60,4 +91,15 @@ shape = SubResource("CircleShape2D_7tut3")
 [node name="MoveTimer" type="Timer" parent="." index="3"]
 autostart = true
 
+[node name="hitbox" type="Area2D" parent="." index="4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" index="0"]
+shape = SubResource("CircleShape2D_kjoej")
+
+[node name="attackarea" type="Area2D" parent="." index="5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attackarea" index="0"]
+shape = SubResource("CircleShape2D_ckyoi")
+
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
