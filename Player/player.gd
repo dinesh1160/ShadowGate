@@ -51,7 +51,6 @@ func _physics_process(delta):
 	#]
 	#
 	
-	
 
 func get_input() -> void:
 	velocity.x = 0

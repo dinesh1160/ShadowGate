@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_fbn38"]
 [ext_resource type="Texture2D" uid="uid://npq5f8aa013i" path="res://Assets/maincharacaterSheetnew.png" id="3_0sa37"]
-[ext_resource type="Texture2D" uid="uid://u3p52vsg4ulk" path="res://Assets/hero/Attack1.png" id="3_uc05h"]
-[ext_resource type="Texture2D" uid="uid://bloo7p0mtkaut" path="res://Assets/hero/Attack2.png" id="3_wcsm8"]
 [ext_resource type="Texture2D" uid="uid://c6js43qpei26e" path="res://Assets/maincharacater-Sheet.png" id="5_bo7m6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xn8gt"]
@@ -50,52 +48,58 @@ region = Rect2(752, 190, 94, 95)
 atlas = ExtResource("5_bo7m6")
 region = Rect2(846, 190, 94, 95)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fbxhj"]
+load_path = "res://.godot/imported/Attack2.png-8bfd4bfb7db1b4ae1c1bd422b28bffe1.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_p84g1"]
-atlas = ExtResource("3_wcsm8")
+atlas = SubResource("CompressedTexture2D_fbxhj")
 region = Rect2(0, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy8ge"]
-atlas = ExtResource("3_wcsm8")
+atlas = SubResource("CompressedTexture2D_fbxhj")
 region = Rect2(200, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dbmri"]
-atlas = ExtResource("3_wcsm8")
+atlas = SubResource("CompressedTexture2D_fbxhj")
 region = Rect2(400, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8frje"]
-atlas = ExtResource("3_wcsm8")
+atlas = SubResource("CompressedTexture2D_fbxhj")
 region = Rect2(600, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_01mrt"]
-atlas = ExtResource("3_wcsm8")
+atlas = SubResource("CompressedTexture2D_fbxhj")
 region = Rect2(800, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wx4og"]
-atlas = ExtResource("3_wcsm8")
+atlas = SubResource("CompressedTexture2D_fbxhj")
 region = Rect2(1000, 0, 200, 200)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s2bca"]
+load_path = "res://.godot/imported/Attack1.png-2566ec73849493ec2969c01ef91221b6.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lk1g"]
-atlas = ExtResource("3_uc05h")
+atlas = SubResource("CompressedTexture2D_s2bca")
 region = Rect2(0, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_af6lk"]
-atlas = ExtResource("3_uc05h")
+atlas = SubResource("CompressedTexture2D_s2bca")
 region = Rect2(200, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3o7s1"]
-atlas = ExtResource("3_uc05h")
+atlas = SubResource("CompressedTexture2D_s2bca")
 region = Rect2(400, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k1q2l"]
-atlas = ExtResource("3_uc05h")
+atlas = SubResource("CompressedTexture2D_s2bca")
 region = Rect2(600, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mk00a"]
-atlas = ExtResource("3_uc05h")
+atlas = SubResource("CompressedTexture2D_s2bca")
 region = Rect2(800, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f0fwk"]
-atlas = ExtResource("3_uc05h")
+atlas = SubResource("CompressedTexture2D_s2bca")
 region = Rect2(1000, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3lfpt"]
@@ -336,7 +340,7 @@ disabled = true
 
 [node name="hitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_qmtjw")
 
