@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ky8kenlcdpop"
-path="res://.godot/imported/b3.png-e671b5009f697cecbac39ae149070a17.ctex"
+uid="uid://c4xcktfdsj4je"
+path="res://.godot/imported/slime-Sheet.png-78efd7fcf207481537567a2d49004a71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/parallax_assets/b3.png"
-dest_files=["res://.godot/imported/b3.png-e671b5009f697cecbac39ae149070a17.ctex"]
+source_file="res://Player/Assets/slime-Sheet.png"
+dest_files=["res://.godot/imported/slime-Sheet.png-78efd7fcf207481537567a2d49004a71.ctex"]
 
 [params]
 

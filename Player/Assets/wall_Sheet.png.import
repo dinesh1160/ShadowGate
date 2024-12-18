@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyx6tlq20gue1"
-path="res://.godot/imported/bg.png-c7176feb79059324b14342f521fe5da8.ctex"
+uid="uid://c8iqa2k5m3mxp"
+path="res://.godot/imported/wall_Sheet.png-7f6dc801d4e18baef8e63bb72551d163.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/parallax_assets/bg.png"
-dest_files=["res://.godot/imported/bg.png-c7176feb79059324b14342f521fe5da8.ctex"]
+source_file="res://Player/Assets/wall_Sheet.png"
+dest_files=["res://.godot/imported/wall_Sheet.png-7f6dc801d4e18baef8e63bb72551d163.ctex"]
 
 [params]
 

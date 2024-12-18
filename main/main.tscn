@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bu83kxe7bcl38"]
 
-[ext_resource type="Texture2D" uid="uid://dyx6tlq20gue1" path="res://Assets/parallax_assets/bg.png" id="1_hulsm"]
+[ext_resource type="Texture2D" uid="uid://dyx6tlq20gue1" path="res://Player/Assets/parallax_assets/bg.png" id="1_hulsm"]
 [ext_resource type="PackedScene" uid="uid://7wnccn3ycuva" path="res://Player/player.tscn" id="3_hpdtv"]
-[ext_resource type="Texture2D" uid="uid://bk87nhjirog7x" path="res://Assets/parallax_assets/b0.png" id="3_puyaj"]
+[ext_resource type="Texture2D" uid="uid://bk87nhjirog7x" path="res://Player/Assets/parallax_assets/b0.png" id="3_puyaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6ceb"]
 size = Vector2(430, 191)
