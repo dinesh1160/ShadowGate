@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nncfyprruncx"
-path="res://.godot/imported/eagle-attackhhurt.png-12a1dfe4570f297e3198f36aa84e8a09.ctex"
+uid="uid://bc667i2qp5a0f"
+path="res://.godot/imported/b1.png-d6a166a937347d335a3c48ef328bfe67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Assets/eagle-attackhhurt.png"
-dest_files=["res://.godot/imported/eagle-attackhhurt.png-12a1dfe4570f297e3198f36aa84e8a09.ctex"]
+source_file="res://Assets/parallax_assets/b1.png"
+dest_files=["res://.godot/imported/b1.png-d6a166a937347d335a3c48ef328bfe67.ctex"]
 
 [params]
 

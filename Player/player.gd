@@ -37,7 +37,7 @@ func _physics_process(delta):
 	if is_on_floor() == false:
 		velocity.y += GRAVITY * delta
 		
-	get_input() #getting input and deciding velocity
+	get_input()  #getting input and deciding velocity
 	move_and_slide() #after velocity
 	calculate_state() #animation
 
@@ -51,11 +51,10 @@ func _physics_process(delta):
 	#]
 	#
 	
-
 func get_input() -> void:
 	velocity.x = 0
 	
-	if !current_attack and !dead:
+	if current_attack and !dead:
 		if Input.is_action_pressed("left"): 
 			velocity.x = -RUN_VELOCITY
 			sprite_2d.flip_h = true
@@ -73,7 +72,7 @@ func get_input() -> void:
 			if Input.is_action_just_pressed("jump") and !current_attack:
 					velocity.y = JUMP_VELOCITY
 					jump_count += 1
-				
+			
 	if current_attack == false:
 		if Input.is_action_just_pressed("left_mouse") or Input.is_action_just_pressed("right_mouse"):
 			current_attack = true

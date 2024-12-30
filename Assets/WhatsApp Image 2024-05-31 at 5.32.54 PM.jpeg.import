@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn1fpdtt0e0cf"
-path="res://.godot/imported/platmormer.png-cdbd260b03fedb8922c232a680c52e9e.ctex"
+uid="uid://ccgat6v1k4sxv"
+path="res://.godot/imported/WhatsApp Image 2024-05-31 at 5.32.54 PM.jpeg-c059d1552ce6329b4e208b6730c56a7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Assets/platmormer.png"
-dest_files=["res://.godot/imported/platmormer.png-cdbd260b03fedb8922c232a680c52e9e.ctex"]
+source_file="res://Assets/WhatsApp Image 2024-05-31 at 5.32.54 PM.jpeg"
+dest_files=["res://.godot/imported/WhatsApp Image 2024-05-31 at 5.32.54 PM.jpeg-c059d1552ce6329b4e208b6730c56a7a.ctex"]
 
 [params]
 

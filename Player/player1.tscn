@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://hfnu5sl51yhb"]
+[gd_scene load_steps=5 format=3 uid="uid://hfnu5sl51yhb"]
 
 [ext_resource type="Script" path="res://Player/player1.gd" id="1_jhu6b"]
+[ext_resource type="PackedScene" uid="uid://dtgw4qejtfqnv" path="res://Player/gun.tscn" id="2_rypmb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jep0u"]
-radius = 8.0
+radius = 29.0
+height = 58.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e3cco"]
 
@@ -14,6 +16,8 @@ script = ExtResource("1_jhu6b")
 shape = SubResource("CapsuleShape2D_jep0u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4.76837e-07, 0)
-scale = Vector2(12, 20)
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(63.25, 57)
 texture = SubResource("PlaceholderTexture2D_e3cco")
+
+[node name="Gun" parent="." instance=ExtResource("2_rypmb")]

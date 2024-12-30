@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtgw4qejtfqnv"]
+
+[ext_resource type="Script" path="res://Player/gun.gd" id="1_mgrwk"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6bhme"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_mgrwk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.192157, 1, 1, 1)
+position = Vector2(-7.7486e-07, -4.76837e-07)
+scale = Vector2(32, 11)
+texture = SubResource("PlaceholderTexture2D_6bhme")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(19, 0)

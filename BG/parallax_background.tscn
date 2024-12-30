@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c27tjomhg7ymi"]
 
-[ext_resource type="Texture2D" uid="uid://ky8kenlcdpop" path="res://Player/Assets/parallax_assets/b3.png" id="1_fsgv5"]
-[ext_resource type="Texture2D" uid="uid://dyaeckqbjhg6p" path="res://Player/Assets/parallax_assets/b2.png" id="2_o54mu"]
-[ext_resource type="Texture2D" uid="uid://bc667i2qp5a0f" path="res://Player/Assets/parallax_assets/b1.png" id="3_k5ap6"]
-[ext_resource type="Texture2D" uid="uid://bk87nhjirog7x" path="res://Player/Assets/parallax_assets/b0.png" id="4_w1m80"]
+[ext_resource type="Texture2D" uid="uid://ky8kenlcdpop" path="res://Assets/parallax_assets/b3.png" id="1_fsgv5"]
+[ext_resource type="Texture2D" uid="uid://dyaeckqbjhg6p" path="res://Assets/parallax_assets/b2.png" id="2_o54mu"]
+[ext_resource type="Texture2D" uid="uid://bc667i2qp5a0f" path="res://Assets/parallax_assets/b1.png" id="3_k5ap6"]
+[ext_resource type="Texture2D" uid="uid://bk87nhjirog7x" path="res://Assets/parallax_assets/b0.png" id="4_w1m80"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 

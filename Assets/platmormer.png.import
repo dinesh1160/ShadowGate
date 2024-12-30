@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cja35ary3j17u"
-path="res://.godot/imported/platmormer-Sheet.png-0e52d103a0edaa0c2683147304dc29eb.ctex"
+uid="uid://bn1fpdtt0e0cf"
+path="res://.godot/imported/platmormer.png-0c9f5929b403824b0e279a756dc81c00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Assets/platmormer-Sheet.png"
-dest_files=["res://.godot/imported/platmormer-Sheet.png-0e52d103a0edaa0c2683147304dc29eb.ctex"]
+source_file="res://Assets/platmormer.png"
+dest_files=["res://.godot/imported/platmormer.png-0c9f5929b403824b0e279a756dc81c00.ctex"]
 
 [params]
 
