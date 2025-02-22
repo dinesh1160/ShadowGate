@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cte2e85gjl3yw"]
+[gd_scene load_steps=11 format=3 uid="uid://cte2e85gjl3yw"]
 
 [ext_resource type="Script" path="res://Levelscene/levelscene.gd" id="1_mmi2o"]
 [ext_resource type="Texture2D" uid="uid://cja35ary3j17u" path="res://Assets/platmormer-Sheet.png" id="3_1ehmq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://djsgtbsd70o3s" path="res://camera/camera_2d.tscn" id="6_2ye1d"]
 [ext_resource type="PackedScene" uid="uid://hfnu5sl51yhb" path="res://Player/player1.tscn" id="6_phnv8"]
 [ext_resource type="PackedScene" uid="uid://cgbnwx1gqy4di" path="res://platform/wall.tscn" id="7_53fql"]
+[ext_resource type="PackedScene" uid="uid://dv216ldm87tsw" path="res://Enemy/air_enemy.tscn" id="7_kitk8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pykrq"]
 size = Vector2(3307.17, 287.634)
@@ -215,3 +216,6 @@ scale = Vector2(4.2, 4.2)
 
 [node name="player1" parent="." instance=ExtResource("6_phnv8")]
 position = Vector2(1116, 292)
+
+[node name="AirEnemy" parent="." instance=ExtResource("7_kitk8")]
+position = Vector2(488, 125)

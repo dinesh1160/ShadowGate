@@ -19,8 +19,6 @@ func _process(delta):
 		scale.y = 1
 	
 	if Input.is_action_just_pressed("left_mouse"):
-		
-		print("bullet")
 		var bullet_instance = BULLET.instantiate()
 		get_tree().root.add_child(bullet_instance)
 		bullet_instance.global_position = muzzle.global_position

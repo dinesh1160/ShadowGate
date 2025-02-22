@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-class_name Player
 
 @onready var animation_player = $AnimatedSprite2D
 @onready var sprite_2d = $AnimatedSprite2D

@@ -9,7 +9,7 @@ height = 58.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_e3cco"]
 
-[node name="player1" type="CharacterBody2D"]
+[node name="player1" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_jhu6b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

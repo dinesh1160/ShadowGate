@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Player
 
 const GRAVITY : float = 1000.0
 const JUMP_VELOCITY : float = -600.0
